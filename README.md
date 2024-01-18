@@ -1,5 +1,14 @@
 # citi_bike_tableau
 
+## Contents
+    1. [Tableau Public File](https://github.com/RJBarker/citi_bike_tableau#tableau-public-file)
+    2. [Scenario](https://github.com/RJBarker/citi_bike_tableau#scenario)
+    3. [Instructions](https://github.com/RJBarker/citi_bike_tableau#instructions)
+    4. [Data Retrieval](https://github.com/RJBarker/citi_bike_tableau#data-retrieval)
+    5. [Data Cleaning](https://github.com/RJBarker/citi_bike_tableau#data-cleaning)
+    6. [Data Analysis](https://github.com/RJBarker/citi_bike_tableau#data-analysis)
+    7. [References](https://github.com/RJBarker/citi_bike_tableau#references)
+
 ### Tableau Public File
 
 [Ryan Barker - citi_bike_v3](https://public.tableau.com/views/citi_bike_v3/CitiBike_Analysis?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
@@ -60,7 +69,9 @@ Your task in this assignment is to aggregate the data found in the Citi Bike Tri
     - Summer Months [Click Here](Data_Handling/Weather_Extract/summer_weather.ipynb)
     - Winter Months [Click Here](Data_Handling/Weather_Extract/winter_weather.ipynb)
 
-#### Data Cleaning
+------
+
+### Data Cleaning
 
 **Citi Bike**
 - *Full Code Can be found Here: [Concat Notebook](Data_Handling/Concat_CSV_Files.ipynb)*
@@ -77,20 +88,86 @@ Your task in this assignment is to aggregate the data found in the Citi Bike Tri
     - `winter_df.csv`
     - *Note: Due to the size of these files, they may not show within this GitHub repo*
 
+<br/>
+
 **Open-Meteo.com Weather**
 - *Full Code can be found here: [Weather Extract Folder](Data_Handling/Weather_Extract/)*
 - I first obtained the `min` and `max` dates of the `started_at` column to idenitfy the date period required.
 - ![OpenMeteo - Min/Max Dates](Assets/OpenMeteo_DatePeriod.png)
 - I then created a frequency DataFrame for each hour I required from the Open-Meteo service. This would be used in the API request
-- ![]()
+- ![OpenMeteo - Frequency](Assets/OpenMeteo_Frequency.png)
 - A request was then made with the results being passed into another DataFrame.
-- ![]()
+- ![OpenMeteo - API Request](Assets/OpenMeteo_APIRequest.png)
 - Additional mapping tasks were conducted on some of the values
-- ![]()
-- Once completed, the DataFrame was then output as:
+- ![OpenMeteo - WMO Mapping](Assets/OpenMeteo_Mapping.png)
+- Once completed, the DataFrame's were output as:
     - `summer_weather.csv`
     - `winter_weather.csv`
 
+------
+
+### Data Analysis
+
+My Tableau Story is broken down into three pages:
+
+- Peak Daily Usage
+- Temperature vs Number of Rides
+- Map of Station Popularity (Summer Months)
+
+--------
+
+#### Peak Daily Usage
+
+![Peak Daily Usage - Dashboard View](Assets/Tableau_PeakDailyUsage.png)
+
+**Analysis**
+
+Weekday Analysis
+- We can see from the heatmaps that both Summer and Winter months had peak usage hours between 7-8am and 5-6pm on weekdays. This can clearly be attributed to typical working hours and people commuting to work.
+
+Weekend Analysis
+- In contrast to the weekday usage, weekend's experience a much broader range of hours where usage peaks. During Summer months usage begins to increase from 8am with consistent demand through until 8pm before it begins trailing off. Winter's usage follows a similar trend over a shorter daily period possibly due to lesser daylight hours
+
+--------
+
+#### Temperature vs Number of Rides
+
+![Temp vs Number of Rides](Assets/Tableau_TempvsRides.png)
+
+**Analysis**
+
+Temperature vs Rider Count Analysis
+
+- Through the data obtained from Open-Meteo.com, and from the visuals provided, we can see that the temperature overall has a significant effect on the Citi Bike Service usage.
+
+- Through the Summer months there is a clear uptake when temperatures hit around 20(c)+ peaking at 25(c) with a negative effect happening when temperatures reach 27(c)+.
+
+- In Winter months, however, the peak occurred at around 6(c). This is inline with the average temperature for this time of year in Jersey City and we would expect more data points to occur within this temperature zone.
+
+- Another key highlight is the split of usage between members and casual. In summer months the split is distributed 70%-30% in favour of the member category. During the winter, there is approx. a 5% shift to 75%-25%, again in favour of the members category.
+
+- The winter is an ideal time for a preventative maintenance programme to be implemented to ensure bikes are in optimal condition ready for temperature and service usage increases.
+
+--------
+
+#### Map of Station Popularity
+
+![Map Station](Assets/Tableau_StationsMap.png)
+
+**Analysis**
+
+Start Stations
+
+- From the dynamic map we can see how the station usage increases at the peak times previously identified in the `Peak Daily Usage`
+- The main Zip codes with the most activity are `07030` and `07302`
+- The Zip code `07030` appears to be more of a residential area and would fit with the hypothesis that the peak hours primary contribution is through commuting to work.
+
+End Stations
+
+- The end stations follow the similar trend to the start stations, with peak hours occurring during commuting times.
+- We can see that a small number of journey's venture out of Jersey City, and into other areas of New York.
+- The vast majority of journey's occur within Jersey city and more predominatley between the zip codes `07030` and `07302`.
+- This analysis shows that the Citi Bike service is a real benefit to both residents and tourists within Jersey City.
 
 --------
 
@@ -98,4 +175,7 @@ Your task in this assignment is to aggregate the data found in the Citi Bike Tri
 
 | Reference Name | Description |
 |----------------|-------------|
-| | |
+| edX Boot Camps LLC | Course materials and assignment instructions |
+| [Citi Bike NYC](https://citibikenyc.com/) | Citi Bike Trip Data |
+| [Open-Meteo.com](https://www.open-meteo.com/) | Historical hourly weather data service |
+| [Tableau](https://www.tableau.com/) | *"Tableau is a visual analytics platform transforming the way we use data to solve problems – empowering people and organisations to make the most of their data."* |
