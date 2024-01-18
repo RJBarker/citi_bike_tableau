@@ -1,13 +1,14 @@
 # citi_bike_tableau
 
-## Contents
-    1. [Tableau Public File](https://github.com/RJBarker/citi_bike_tableau#tableau-public-file)
-    2. [Scenario](https://github.com/RJBarker/citi_bike_tableau#scenario)
-    3. [Instructions](https://github.com/RJBarker/citi_bike_tableau#instructions)
-    4. [Data Retrieval](https://github.com/RJBarker/citi_bike_tableau#data-retrieval)
-    5. [Data Cleaning](https://github.com/RJBarker/citi_bike_tableau#data-cleaning)
-    6. [Data Analysis](https://github.com/RJBarker/citi_bike_tableau#data-analysis)
-    7. [References](https://github.com/RJBarker/citi_bike_tableau#references)
+## Table of Contents
+
+1. [Tableau Public File](https://github.com/RJBarker/citi_bike_tableau#tableau-public-file)
+2. [Scenario](https://github.com/RJBarker/citi_bike_tableau#scenario)
+3. [Instructions](https://github.com/RJBarker/citi_bike_tableau#instructions)
+4. [Data Retrieval](https://github.com/RJBarker/citi_bike_tableau#data-retrieval)
+5. [Data Cleaning](https://github.com/RJBarker/citi_bike_tableau#data-cleaning)
+6. [Data Analysis](https://github.com/RJBarker/citi_bike_tableau#data-analysis)
+7. [References](https://github.com/RJBarker/citi_bike_tableau#references)
 
 ### Tableau Public File
 
